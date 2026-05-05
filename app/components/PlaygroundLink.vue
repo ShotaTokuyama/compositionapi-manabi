@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { generatePlaygroundURL } from '~/utils/playground'
+
 const props = defineProps<{
   code: string
 }>()
 
-const url = usePlaygroundUrl(props.code)
+const url = generatePlaygroundURL(props.code)
 </script>
 
 <template>

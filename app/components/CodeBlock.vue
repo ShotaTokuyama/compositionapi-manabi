@@ -21,6 +21,7 @@ watch(() => colorMode.value, highlight)
 
 <template>
   <div class="rounded-lg overflow-hidden text-sm">
+    <!-- v-html: Shiki が生成したシンタックスハイライト済みHTML。入力は静的データのみでShikiがエスケープ済み -->
     <div v-if="highlighted" class="overflow-x-auto" v-html="highlighted" />
     <pre v-else class="bg-neutral-900 text-neutral-100 p-4 rounded-lg overflow-x-auto"><code>{{ code }}</code></pre>
   </div>

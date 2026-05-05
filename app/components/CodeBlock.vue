@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   code: string
-  lang?: string
+  lang?: 'vue' | 'typescript'
 }>()
 
 const colorMode = useColorMode()
